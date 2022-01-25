@@ -18,20 +18,46 @@
     <link rel="stylesheet" href="assets/css/default.css">
     <!--====== Style CSS ======-->
     <link rel="stylesheet" href="assets/css/style.css">    
-<script>
-    window.onload = function() {
-      var context = new AudioContext();
+
+<audio id="myAudio" autoplay loop id="playAudio">
+      <source src="assets/mp3/cintaku.mp3">
+</audio>
+<script type="text/javascript">
+    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    if(!isChrome){
+      $('#iframeAudio').remove()
     }
+    else{
+     $('#playAudio').remove() //just to make sure that it will not have 2x audio in the background 
+    }
+
+$('.play-pause').click(function (e) { 
+                e.preventDefault();
+                var icon = $(this).find('i');
+                var x = document.getElementById("myAudio");
+                icon.toggleClass('fa-play fa-stop');
+                if(icon.hasClass('fa-play')){
+                    x.pause();
+                    x.currentTime = 0;
+                } else {
+                    x.play();
+                }
+            });
+            $('#welcome').click(function (e) { 
+                e.preventDefault();
+                if(loaded){
+                    $('#welcome').html('').fadeOut('slow');
+                    $('body').removeAttr('style');
+                    var x = document.getElementById("myAudio").play();
+                    $('.play-pause').fadeIn('slow');
+                }
+            });
 </script>
 
-<div>
-    <audio src="assets/mp3/cintaku.mp3" autoplay="true" loop="infinite" autostart="true"></audio>
-</div>
-
 </head>
-<body>
+<body>  
     <!--====== PRELOADER PART START ======-->
-    <div class="preloader">
+    <div id="welcome" class="preloader">
         <div class="loader">
             <div class="ytp-spinner">
                 <div class="ytp-spinner-container">
@@ -234,7 +260,7 @@
 <section id="coming_soon" class="coming_soon_area pt-20 pb-70">
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Mar 03, 2022 09:00:00").getTime();
+var countDownDate = new Date("03 Mar 2022 09:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -251,18 +277,18 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  // Display the result in the element with id="waktu"
+  document.getElementById("waktu").innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
   document.getElementById("days").innerHTML = days;
-document.getElementById("hours").innerHTML = hours;
-document.getElementById("minutes").innerHTML = minutes;
-document.getElementById("seconds").innerHTML = seconds;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
 
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("waktu").innerHTML = "EXPIRED";
   }
 }, 1000);
 </script>
@@ -280,31 +306,31 @@ document.getElementById("seconds").innerHTML = seconds;
                 </div>
             </div>
             <div class="col-lg-8">
-                <div class="wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.6s" data-countdown="2022/03/03">
+                <div class="wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.6s" data-countdown="03/03/2022">
                     <div class="coming_soon_count d-flex justify-content-between pt-20">
-                        <p id="demo" style="display: none;"></p>
+                        <p id="waktu" style="display: none;"></p>
                         <div class="single_count d-flex align-items-center justify-content-center pt-30">
                             <div class="count_content">
                                 <span class="count" id="days"></span>
-                                    <p class="times demo">Days</p>
+                                    <p class="times waktu">Days</p>
                             </div>
                         </div>
                         <div class="single_count d-flex align-items-center justify-content-center pt-30">
                             <div class="count_content">
                                 <span class="count" id="hours"></span>
-                                    <p class="times demo">Hour</p>
+                                    <p class="times waktu">Hour</p>
                             </div>
                         </div>
                         <div class="single_count d-flex align-items-center justify-content-center pt-30">
                             <div class="count_content">
                                 <span class="count" id="minutes"></span>
-                                    <p class="times demo">Minute</p>
+                                    <p class="times waktu">Minute</p>
                             </div>
                         </div>
                         <div class="single_count d-flex align-items-center justify-content-center pt-30">
                             <div class="count_content">
                                 <span class="count" id="seconds"></span>
-                                    <p class="times demo">Seconds</p>
+                                    <p class="times waktu">Seconds</p>
                             </div>
                         </div>                      
                     </div>                    
@@ -320,8 +346,7 @@ document.getElementById("seconds").innerHTML = seconds;
 
     <!--====== CONTACT PART START ======-->
     <section id="location" class="contact_area pt-130 pb-130">
-        <div class="container">
-            
+        <div class="container">            
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="section_title text-center pb-30">
@@ -341,7 +366,7 @@ document.getElementById("seconds").innerHTML = seconds;
             </div>
         </div>
         </div>
-        </div> <!-- container -->
+    </div> <!-- container -->
     </section>
     <!--====== CONTACT PART ENDS ======-->
 
@@ -365,6 +390,7 @@ document.getElementById("seconds").innerHTML = seconds;
             </div>
         </div> <!-- container -->
     </footer>
+    <a href="#" class="play-pause" style="display: none;"><i class="fa fa-stop"></i></a>
     <!--====== FOOTER PART ENDS ======-->
     
     <!--====== BACK TOP TOP PART START ======-->
