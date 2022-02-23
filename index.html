@@ -17,47 +17,13 @@
     <!--====== Default CSS ======-->
     <link rel="stylesheet" href="assets/css/default.css">
     <!--====== Style CSS ======-->
-    <link rel="stylesheet" href="assets/css/style.css">    
-
-<audio id="myAudio" autoplay loop id="playAudio">
-      <source src="assets/mp3/cintaku.mp3">
-</audio>
-<script type="text/javascript">
-    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-    if(!isChrome){
-      $('#iframeAudio').remove()
-    }
-    else{
-     $('#playAudio').remove() //just to make sure that it will not have 2x audio in the background 
-    }
-
-$('.play-pause').click(function (e) { 
-                e.preventDefault();
-                var icon = $(this).find('i');
-                var x = document.getElementById("myAudio");
-                icon.toggleClass('fa-play fa-stop');
-                if(icon.hasClass('fa-play')){
-                    x.pause();
-                    x.currentTime = 0;
-                } else {
-                    x.play();
-                }
-            });
-            $('#welcome').click(function (e) { 
-                e.preventDefault();
-                if(loaded){
-                    $('#welcome').html('').fadeOut('slow');
-                    $('body').removeAttr('style');
-                    var x = document.getElementById("myAudio").play();
-                    $('.play-pause').fadeIn('slow');
-                }
-            });
-</script>
-
+    <link rel="stylesheet" href="assets/css/style.css">
+   
 </head>
-<body>  
+<body> 
+
     <!--====== PRELOADER PART START ======-->
-    <!-- <div id="welcome" class="preloader">
+    <div id="welcome" class="preloader">
         <div class="loader">
             <div class="ytp-spinner">
                 <div class="ytp-spinner-container">
@@ -72,7 +38,7 @@ $('.play-pause').click(function (e) {
                 </div>
             </div>
         </div>
-    </div> -->    
+    </div>
     <!--====== PRELOADER PART ENDS ======-->
 
     <!--====== HEADER PART START ======-->
@@ -84,6 +50,36 @@ $('.play-pause').click(function (e) {
                         <nav class="navbar navbar-expand-lg">
                             <a class="navbar-brand" href="#">
                                 <img src="assets/images/logo.png" alt="Logo">
+                                <audio id="audio" loop="true" autoplay="true"><source src="assets/mp3/cintaku.mp3"></audio>
+                                    <button class="btn btn-primary" onclick="toggleMusic()" id="btn-playback" data-play="false">
+                                        <i class="fa fa-play"></i>
+                                        <span id="btn-text">PLAY</span>
+                                     </button>
+    <script>
+    const myAudio = document.getElementById("audio");
+    const btn = document.getElementById("btn-playback");
+    const btnIcon = document.querySelector("#btn-playback > i");
+    const btnText = document.getElementById("btn-text");
+    
+    const toggleMusic = () => {      
+    const dataPlay = btn.getAttribute('data-play');
+            
+      if(dataPlay === 'false') {
+        btn.setAttribute('data-play', 'true');
+        myAudio.play();
+        btnIcon.classList.remove("fa-play");
+        btnIcon.classList.add("fa-pause");
+        btnText.innerText = "PAUSE";
+      } else {
+        btn.setAttribute('data-play', 'false');
+        myAudio.pause();
+        btnIcon.classList.remove("fa-pause");
+        btnIcon.classList.add("fa-play");
+        btnText.innerText = "PLAY";
+      }
+    };
+    </script>
+
                             </a>                            
                         </nav> <!-- navbar -->
                     </div>
