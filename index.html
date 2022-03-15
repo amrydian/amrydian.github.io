@@ -17,8 +17,7 @@
     <!--====== Default CSS ======-->
     <link rel="stylesheet" href="assets/css/default.css">
     <!--====== Style CSS ======-->
-    <link rel="stylesheet" href="assets/css/style.css">
-   
+    <link rel="stylesheet" href="assets/css/style.css">   
 </head>
 <body> 
     <!--====== PRELOADER PART START ======-->
@@ -54,31 +53,28 @@
                                         <i class="fa fa-play"></i>
                                         <span id="btn-text">PLAY</span>
                                      </button>
-    <script>
-    const myAudio = document.getElementById("audio");
-    const btn = document.getElementById("btn-playback");
-    const btnIcon = document.querySelector("#btn-playback > i");
-    const btnText = document.getElementById("btn-text");
-    
-    const toggleMusic = () => {      
-    const dataPlay = btn.getAttribute('data-play');
-            
-      if(dataPlay === 'false') {
-        btn.setAttribute('data-play', 'true');
-        myAudio.play();
-        btnIcon.classList.remove("fa-play");
-        btnIcon.classList.add("fa-pause");
-        btnText.innerText = "PAUSE";
-      } else {
-        btn.setAttribute('data-play', 'false');
-        myAudio.pause();
-        btnIcon.classList.remove("fa-pause");
-        btnIcon.classList.add("fa-play");
-        btnText.innerText = "PLAY";
-      }
-    };
-    </script>
-
+                                            <script>
+                                            const myAudio = document.getElementById("audio");
+                                            const btn = document.getElementById("btn-playback");
+                                            const btnIcon = document.querySelector("#btn-playback > i");
+                                            const btnText = document.getElementById("btn-text");                                            
+                                            const toggleMusic = () => {      
+                                            const dataPlay = btn.getAttribute('data-play');                                                    
+                                              if(dataPlay === 'false') {
+                                                btn.setAttribute('data-play', 'true');
+                                                myAudio.play();
+                                                btnIcon.classList.remove("fa-play");
+                                                btnIcon.classList.add("fa-pause");
+                                                btnText.innerText = "PAUSE";
+                                              } else {
+                                                btn.setAttribute('data-play', 'false');
+                                                myAudio.pause();
+                                                btnIcon.classList.remove("fa-pause");
+                                                btnIcon.classList.add("fa-play");
+                                                btnText.innerText = "PLAY";
+                                              }
+                                            };
+                                            </script>
                             </a>                            
                         </nav> <!-- navbar -->
                     </div>
@@ -96,13 +92,13 @@
                             	</div>
                             	<div class="row justify-content-center">
                             	       <div class=" wow fadeInLeftBig" data-wow-duration="1.4s" data-wow-delay="0.8s">
-                            		      <h2 class="slider_title" data-animation="fadeInUp" data-delay="0.2s">Amry &nbsp; </h2>
+                            		      <h2 class="slider_title" data-animation="fadeInUp" data-delay="0.2s">Amry &nbsp;</h2>
                             	       </div>
                                        <div class=" wow fadeIn" data-wow-duration="1.4s" data-wow-delay="1.1s">
                                           <h2 class="slider_title" data-animation="fadeInUp" data-delay="0.2s"><span>&</span></h2>
                                        </div>
                             	       <div class=" wow fadeInRightBig" data-wow-duration="1.4s" data-wow-delay="0.8s">
-                            		      <h2 class="slider_title" data-animation="fadeInUp" data-delay="0.2s"> &nbsp; Dian </h2>
+                            		      <h2 class="slider_title" data-animation="fadeInUp" data-delay="0.2s"> &nbsp;Dian</h2>
                             	       </div>
                             	</div>
                             	       <div class=" wow fadeIn" data-wow-duration="1.4s" data-wow-delay="0.8s">
@@ -178,6 +174,8 @@
                 <div class="col-lg-12">
                     <div class="single_event mt-30 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.2s">
                         <div class="event_image">
+                            <!-- <img src="assets/images/99999.jpg" alt="event"> -->
+                            <!-- <video loop="true" autoplay="true" muted="true"><source src="assets/images/vtsimple.mp4" type="video/mp4"></video> -->
                             <div class="row justify-content-center">
                                 <div class="single_love d-flex flex-wrap align-items-center">
                                 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval="1300" >
@@ -215,12 +213,52 @@
                                     <div class="carousel-item" style="transition-duration: 1s; ">
                                     <img class="d-block w-100" src="assets/images/11.jpg">
                                     </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/12.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/13.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/14.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/15.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/16.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/17.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/18.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/19.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/20.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/21.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/22.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/23.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/24.jpg">
+                                    </div>
                                     </div>
                                 </div>
                                 </div> <!-- single love -->
                             </div> <!-- love wrapper -->
                         </div>
-                        <div class="event_content">                            
+                        <div class="event_content">
+                            <!-- <span class="date">03 Maret 2022</span> -->
                         </div>
                     </div> <!-- single event -->
                 </div>
@@ -243,56 +281,93 @@
             <div class="row justify-content-center">
                 <div class="col-lg-12">
                     <div class="single_event mt-30 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.2s">
-                        <div class="event_image">
+                        <div class="event_image">                        
                             <div class="row justify-content-center">
                                 <div class="single_love d-flex flex-wrap align-items-center">
                                 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval="1300" >
                                     <div class="carousel-inner">                            
                                     <div class="carousel-item  active" style="transition-duration: 1s; ">
-                                    <img class="d-block w-100" src="assets/images/11a.jpg">
-                                    </div>
-                                    <div class="carousel-item" style="transition-duration: 1s; ">
-                                    <img class="d-block w-100" src="assets/images/10a.jpg">
-                                    </div>
-                                    <div class="carousel-item" style="transition-duration: 1s; ">
-                                    <img class="d-block w-100" src="assets/images/9a.jpg">
-                                    </div>
-                                    <div class="carousel-item" style="transition-duration: 1s; ">
-                                    <img class="d-block w-100" src="assets/images/8a.jpg">
-                                    </div>
-                                    <div class="carousel-item" style="transition-duration: 1s; ">
-                                    <img class="d-block w-100" src="assets/images/7a.jpg">
-                                    </div>
-                                    <div class="carousel-item" style="transition-duration: 1s; ">
-                                    <img class="d-block w-100" src="assets/images/6a.jpg">
-                                    </div>
-                                    <div class="carousel-item" style="transition-duration: 1s; ">
-                                    <img class="d-block w-100" src="assets/images/5a.jpg">
-                                    </div>
-                                    <div class="carousel-item" style="transition-duration: 1s; ">
-                                    <img class="d-block w-100" src="assets/images/4ajpg">
-                                    </div>
-                                    <div class="carousel-item" style="transition-duration: 1s; ">
-                                    <img class="d-block w-100" src="assets/images/3a.jpg">
+                                    <img class="d-block w-100" src="assets/images/1a.jpg">
                                     </div>
                                     <div class="carousel-item" style="transition-duration: 1s; ">
                                     <img class="d-block w-100" src="assets/images/2a.jpg">
                                     </div>
                                     <div class="carousel-item" style="transition-duration: 1s; ">
-                                    <img class="d-block w-100" src="assets/images/1a.jpg">
+                                    <img class="d-block w-100" src="assets/images/3a.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/4a.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/5a.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/6a.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/7a.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/8a.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/9a.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/10a.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/11a.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/12a.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/13a.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/14a.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/15a.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/16a.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/17a.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/18a.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/19a.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/20a.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/21a.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/22a.jpg">
+                                    </div>
+                                    <div class="carousel-item" style="transition-duration: 1s; ">
+                                    <img class="d-block w-100" src="assets/images/23a.jpg">
                                     </div>
                                     </div>
                                 </div>
                                 </div> <!-- single love -->
                             </div> <!-- love wrapper -->
                         </div>
-                        <div class="event_content">
+                        <div class="event_content">                            
                         </div>
                     </div> <!-- single event -->
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
     </section>
+<!-- OUR WEDDING PART GALLERY END -->
 
     <!--====== FOOTER PART START ======-->
     <footer id="footer" class="footer_area">
@@ -309,7 +384,7 @@
                         <h3 class="title">Amry <span>&</span> Dian</h3>
                     </div> <!-- section title -->
                 </div>
-            </div> <!-- row -->    
+            </div>
             </div> <!-- footer content -->
             <div class="footer_copyright text-center">
                 <p style="font-size:70%;">Designed and Developed by <a href="https://hutabaratamryanto.github.io/" style="color: #D59A57" rel="nofollow" target="_blank">AMS Solutions</a></p>
